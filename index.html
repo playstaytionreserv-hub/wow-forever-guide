@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WoW Forever Guide | Long-Term Azeroth</title>
+  <meta name="description" content="A fan-made guide to WoW Forever, long-term progression, raids, PvP, professions and Azeroth.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(89, 66, 180, 0.18), transparent 32%),
+        radial-gradient(circle at 15% 35%, rgba(22, 73, 128, 0.16), transparent 30%),
+        #060913;
+      color: #d8dbea;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(5, 8, 18, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(203, 174, 102, 0.14);
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      color: #f0ce79;
+      font-family: Georgia, serif;
+      font-size: 21px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      color: #aab0c0;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .links a:hover {
+      color: white;
+    }
+
+    .hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      right: -150px;
+      top: -100px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(110, 75, 220, 0.28),
+        transparent 67%
+      );
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .small-title {
+      display: inline-block;
+      color: #e5c675;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border: 1px solid rgba(229, 198, 117, 0.24);
+      border-radius: 999px;
+      padding: 7px 13px;
+      margin-bottom: 23px;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(48px, 7vw, 80px);
+      color: white;
+      line-height: 1.03;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: #e1c06d;
+    }
+
+    .lead {
+      max-width: 760px;
+      color: #abb2c5;
+      font-size: 19px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 33px;
+      padding: 14px 24px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #5741b8, #8754ba);
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 12px 35px rgba(76, 50, 160, 0.3);
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 78px 0;
+    }
+
+    .section-title {
+      color: white;
+      font-family: Georgia, serif;
+      font-size: 37px;
+      margin-bottom: 16px;
+    }
+
+    .section-intro {
+      color: #9fa6b9;
+      max-width: 780px;
+      margin-bottom: 38px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(19, 25, 47, 0.95),
+          rgba(10, 14, 29, 0.95)
+        );
+      border: 1px solid rgba(168, 146, 236, 0.13);
+      padding: 29px;
+      border-radius: 15px;
+      min-height: 230px;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(225, 192, 109, 0.3);
+    }
+
+    .icon {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #efd17f;
+      font-family: Georgia, serif;
+      margin-bottom: 12px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #9fa6b9;
+      font-size: 15px;
+    }
+
+    .feature {
+      padding: 48px;
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 90% 20%, rgba(93, 62, 190, 0.22), transparent 32%),
+        rgba(12, 16, 31, 0.9);
+      border: 1px solid rgba(176, 151, 244, 0.14);
+    }
+
+    .feature h2 {
+      color: white;
+      font-family: Georgia, serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .feature p {
+      max-width: 820px;
+      color: #aab1c3;
+      margin-bottom: 20px;
+    }
+
+    .boost-box {
+      margin-top: 35px;
+      padding: 28px 30px;
+      border-left: 3px solid #dbbc69;
+      background: rgba(219, 188, 105, 0.05);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .boost-box .keyword {
+      color: #f0d17d;
+      font-weight: bold;
+    }
+
+    .boost-box a {
+      display: inline-block;
+      margin-left: 5px;
+      color: #bdaaff;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .thoughts {
+      max-width: 850px;
+    }
+
+    .thoughts p {
+      color: #aab1c3;
+      margin-bottom: 21px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(168, 146, 236, 0.1);
+      padding: 34px 0;
+      text-align: center;
+      color: #6f778c;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        flex-direction: column;
+        justify-content: center;
+        padding: 17px 0;
+      }
+
+      .links {
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: 530px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature {
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">WOW FOREVER</div>
+
+      <div class="links">
+        <a href="#world">The World</a>
+        <a href="#progression">Progression</a>
+        <a href="#future">The Future</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="small-title">
+          A Long-Term Journey Through Azeroth
+        </div>
+
+        <h1>
+          Azeroth Was Never Meant to Be
+          <span>Temporary</span>
+        </h1>
+
+        <p class="lead">
+          WoW Forever offers an interesting idea: a World of Warcraft
+          experience where progression, characters, professions, raids
+          and personal goals can remain meaningful for much longer.
+        </p>
+
+        <a class="button" href="#world">
+          Explore WoW Forever
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="world">
+    <div class="container">
+
+      <h2 class="section-title">
+        A World Built to Last
+      </h2>
+
+      <p class="section-intro">
+        A persistent version of Azeroth changes the way players can think
+        about progression. Instead of constantly preparing for everything
+        to be replaced, different parts of the game can continue developing
+        alongside each other.
+      </p>
+
+      <div class="grid">
+
+        <div class="card">
+          <div class="icon">⚔️</div>
+
+          <h3>Raids & Dungeons</h3>
+
+          <p>
+            Endgame encounters can remain meaningful goals instead of
+            temporary stepping stones toward another expansion.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🔥</div>
+
+          <h3>PvP Progression</h3>
+
+          <p>
+            A stable environment gives players more time to master classes,
+            experiment with builds and improve their competitive play.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">⚒️</div>
+
+          <h3>Professions</h3>
+
+          <p>
+            Crafting and gathering can become lasting parts of a character
+            when recipes and materials continue to have a reason to exist.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="progression">
+    <div class="container">
+
+      <div class="feature">
+
+        <h2>
+          Progression Does Not Have to Mean More Levels
+        </h2>
+
+        <p>
+          One of the most interesting things about a long-term World of
+          Warcraft environment is that progression can take many forms.
+          Better equipment, profession development, PvP mastery, collections,
+          alternate characters and exploration can all provide meaningful goals.
+        </p>
+
+        <p>
+          Different players will naturally approach the game differently.
+          Some may want to experience every quest and dungeon slowly, while
+          others will mainly care about reaching difficult raids or competitive
+          PvP.
+        </p>
+
+        <div class="boost-box">
+
+          One progression-related topic connected with the game is
+          <span class="keyword">WoW Forever Boost</span> through
+
+          <a href="https://wowvendor.com/shop/wow-forever/">
+            wowvendor
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="future">
+    <div class="container">
+
+      <div class="thoughts">
+
+        <h2 class="section-title">
+          The Future of WoW Forever
+        </h2>
+
+        <p>
+          The biggest challenge for any permanent version of World of Warcraft
+          is finding ways to introduce new experiences without making everything
+          that came before irrelevant.
+        </p>
+
+        <p>
+          If older zones, professions, raids and character investments continue
+          to have value, Azeroth can feel more like one connected world rather
+          than a series of temporary destinations.
+        </p>
+
+        <p>
+          That could also make alternate characters more enjoyable. Instead of
+          constantly racing toward another expansion, players can experiment
+          with different classes, roles and playstyles while remaining part of
+          the same overall journey.
+        </p>
+
+        <p>
+          The most interesting question is not simply how much new content can
+          be added. It is whether that content can expand Azeroth without losing
+          the atmosphere and sense of adventure that made the world memorable
+          in the first place.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    Fan-made WoW Forever resource · Long-Term Azeroth Guide
+  </div>
+</footer>
+
+</body>
+</html>
